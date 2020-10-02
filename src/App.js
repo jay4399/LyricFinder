@@ -4,10 +4,11 @@ import Navbar from './components/layout/Navbar'
 import Index from './components/layout/Index'
 import Lyrics from './components/tracks/Lyrics'
 import { Provider } from './Context'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 export default function App() {
   return (
+    <HashRouter basename='/'>
     <Provider>
       <Router>
         <React.Fragment>
@@ -21,5 +22,6 @@ export default function App() {
         </React.Fragment>
       </Router>
     </Provider>
+    </HashRouter>
   );
 }
