@@ -4,12 +4,11 @@ import Navbar from './components/layout/Navbar'
 import Index from './components/layout/Index'
 import Lyrics from './components/tracks/Lyrics'
 import { Provider } from './Context'
-import { HashRouter, BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 export default function App() {
   return (
     <Provider>
-      <HashRouter basename="/">
       <Router>
         <React.Fragment>
           <Navbar />
@@ -21,7 +20,6 @@ export default function App() {
           </div>
         </React.Fragment>
       </Router>
-      </HashRouter>
     </Provider>
   );
 }
